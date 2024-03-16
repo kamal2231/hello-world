@@ -11,13 +11,13 @@ pipeline {
         stage('Build') {
             steps {
                 // Build file using Docker
-                sh 'docker build -t hello-world-html '
+                sh 'docker build -t hello-world-html .'
             }
         }
         stage('Deploy') {
             steps {
                 // Deploy file to Docker container
-                sh 'docker run -d -p 4000:4000 hello-world'
+                sh 'docker run -d -p 4000:4000 hello-world-html'
             }
         }
     }
