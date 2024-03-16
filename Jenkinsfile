@@ -11,7 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Build file using Docker
-                sh 'docker build -t hello-world-html .'
+                sh 'docker build -t hello-world-html '
             }
         }
         stage('Deploy') {
