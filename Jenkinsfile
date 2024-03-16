@@ -22,9 +22,6 @@ pipeline {
         }
     }
     post {
-        always {
-            // Clean up any resources, if needed
-        }
         success {
             echo 'Pipeline completed successfully'
         }
